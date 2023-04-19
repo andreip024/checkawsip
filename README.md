@@ -18,6 +18,7 @@
 
 <p align="center">
   <a href="#about">About</a> •
+  <a href="#variables">Variables</a> •
   <a href="#run-locally">Run locally</a> •
   <a href="#roadmap">Roadmap</a> •
   <a href="#changelog">Changelog</a> •
@@ -27,7 +28,7 @@
   <p align="center">
   This repository generates https://checkawsip.com
 
-  ![Screenshot of the app](https://images-0168749535.s3.eu-central-1.amazonaws.com/CheckAWSip_screenshot.jpg)
+  ![Screenshot of the app](https://images-0168749535.s3.eu-central-1.amazonaws.com/checkawsip.com.jpg)
 </p>
 
 ---
@@ -41,6 +42,16 @@ This project creates a simple and straightforward WebApp using Python with Flask
 The app is built and deployed using a Docker container to ensure consistency and ease of deployment across different platforms.
 
 The Docker base image is ***python:3.9-slim-buster***
+
+## Variables
+
+| Variables name               |  Description                         |
+|----------------|-------------------------------|
+|SITE_KEY     |Site key (public) for Google reChapcha v3|
+|SECRET_KEY   |Secret key (private) for Google reChapcha v3|
+|VERIFY_URL   |Google URL for reChapcha - **DO NOT EDIT**|
+|ANALYTICS_ID |Code for Google Analytics|
+|AWS_URL      |AWS IP Ranges URL - **DO NOT EDIT**|
 
 ## Run locally
 
@@ -57,18 +68,34 @@ And the app will be accessible on http://localhost:5000/
 
 ## Roadmap
 
+- [X] Display the region of the IP Adress;
+- [X] Add Google reCaptcha v3 integration;
+- [X] Add Goolge Analytics integration;
+- [X] Add logging;
+- [X] Add last update from AWS on footer;
+- [ ] Add contact page;
+- [ ] Send logs in AWS CloudWatch;
 - [ ] Add aditional information about the page in the footer;
 - [ ] Build the image and push it to Docker Hub with GitHub Actions;
-- [ ] Display the region of the IP Adress;
-- [ ] Create a user registration and login flow (Cross feature with [docker app](https://github.com/andreip024/terraform-aws-infrastructure));
-- [ ] Store the sesion in AWS ElastiCache (Cross feature with [docker app](https://github.com/andreip024/terraform-aws-infrastructure));
-- [ ] Create saves in AWS DynamoDB for stats (Cross feature with [docker app](https://github.com/andreip024/terraform-aws-infrastructure));
-- [ ] Create a queue for requests with AWS SQS (Cross feature with [docker app](https://github.com/andreip024/terraform-aws-infrastructure));
+- [ ] Create a user registration and login flow (Cross feature with [Terraform infra](https://github.com/andreip024/terraform-aws-infrastructure));
+- [ ] Store the sesion in AWS ElastiCache (Cross feature with [Terraform infra](https://github.com/andreip024/terraform-aws-infrastructure));
+- [ ] Create saves in AWS DynamoDB for stats (Cross feature with [Terraform infra](https://github.com/andreip024/terraform-aws-infrastructure));
+- [ ] Create a queue for requests with AWS SQS (Cross feature with [Terraform infra](https://github.com/andreip024/terraform-aws-infrastructure));
 - [ ] Create an API for the app;
 
 ## Changelog
 
-v1.0.0 [05-Apr-2023] - App release
+v1.1.0 [19-Apr-2023]
+
+- Display the region of the IP Adress;
+- Add Google reCaptcha v3 integration;
+- Add Goolge Analytics integration;
+- Add logging;
+- Add last update from AWS on footer;
+
+v1.0.0 [05-Apr-2023] 
+
+- App release
 
 ## License
 

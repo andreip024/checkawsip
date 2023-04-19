@@ -124,7 +124,7 @@ a.btn:hover {
   align-items: center;
 }
 
-.flex-form input[type="submit"] {
+.flex-form button[type="submit"] {
   background: #ef3f5a;
   border: 1px solid #ef3f5a;
   color: #fff;
@@ -135,7 +135,7 @@ a.btn:hover {
   transition: all 0.2s;
 }
 
-.flex-form input[type="submit"]:hover {
+.flex-form button[type="submit"]:hover {
   background: #d73851;
   border: 1px solid #d73851;
 }
@@ -164,11 +164,11 @@ input[type="search"] {
   flex-basis: 500px;
 }
 
-#madeby {
+#footer {
   position: absolute;
   bottom: 0;
-  right: 0;
   padding: 25px 100px;
+  text-align: center;
   color: #fff;
 }
 
