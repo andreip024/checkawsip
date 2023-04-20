@@ -73,7 +73,10 @@ And the app will be accessible on http://localhost:5000/
 - [X] Add Goolge Analytics integration;
 - [X] Add logging;
 - [X] Add last update from AWS on footer;
-- [ ] Add contact page;
+- [X] Add header menu;
+- [X] Add header with include;
+- [ ] Add footer with include;
+- [ ] Add IP address of clients in logs;
 - [ ] Send logs in AWS CloudWatch;
 - [ ] Add aditional information about the page in the footer;
 - [ ] Build the image and push it to Docker Hub with GitHub Actions;
@@ -84,6 +87,13 @@ And the app will be accessible on http://localhost:5000/
 - [ ] Create an API for the app;
 
 ## Changelog
+
+v1.2.0 [20-Apr-2023]
+
+- Add header menu (Home, About, GitHub Project, Register/Login)
+- Add header in a separate file
+- Minor fixes
+- Update documentation
 
 v1.1.0 [19-Apr-2023]
 

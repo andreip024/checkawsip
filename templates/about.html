@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+    <div class="container">
+        <div class="cover">
+          <h2 id="text">About the project</h2>
+          <div id="hit">
+          <h3 id="text">Part of a cross-project with <a href="https://github.com/andreip024/terraform-aws-infrastructure/" target="_blank">TerraformAWSInfrastructure</a>.<br>
+            This project creates a simple and straightforward WebApp using Python with Flask where users can enter an IP address they want to check.<br> When the user submits the IP address, the web app would use the public AWS IP address range JSON to check if the IP address belongs to any of the AWS infrastructure.<br>
+            The app is built and deployed using a Docker container to ensure consistency and ease of deployment across different platforms.</h3>
+          </div>
+          <div id="footer">
+            <span>
+              Last update: {{ last_update }}
+            </span>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
