@@ -1,40 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CheckAWSip</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPW0Q5L2KY"></script>
-    <script>
-      function onSubmit(token) {
-        document.getElementById("check_ip").submit();
-      }
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', "{{ analytics_id }}");
-    </script>
-</head>
+{% include 'header.html' %}
 <body>
     <div class="container">
-
-        <header>
-          <h2><a href="https://checkawsip.com/"><i class="ion-plane"></i>CheckAWSip</a></h2>
-          <nav>
-            <ul>
-              <!-- <li>
-                <a href="#" title="api">API Calls</a>
-              </li>
-              <li>
-                <a class="btn" href="#" title="Register / Log In">Register/Log In</a>
-              </li> -->
-            </ul>
-          </nav>
-        </header>
-
         <div class="cover">
           <h1>Check IP</h1>
           <form id="check_ip" class="flex-form" action="/" method="POST">
@@ -44,8 +12,8 @@
             <input type="search" name="ipform" placeholder="Enter the IP here">
             <button type="submit" class="g-recaptcha" data-sitekey="{{ site_key }}" data-callback='onSubmit' data-action='submit'>Check</button>
           </form>
-          {% if script_response %}
-          <h2 style="color: white;">{{ script_response }}</h2>
+          {% if message_response %}
+            <h2 id="text">{{ message_response }}</h2>
           {% endif %}
           <div id="footer">
             <span>

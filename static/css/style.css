@@ -172,6 +172,12 @@ input[type="search"] {
   color: #fff;
 }
 
+#text {
+  color: white;
+}
+#hit {
+  width: 600px;
+}
 @media all and (max-width:800px) {
   body {
     font-size: 0.9rem;

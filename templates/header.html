@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CheckAWSip</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPW0Q5L2KY"></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("check_ip").submit();
+      }
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', "{{ analytics_id }}");
+    </script>
+</head>
+<div class="container">
+
+  <header>
+    <h2><a href="https://checkawsip.com/"><i class="ion-plane"></i>CheckAWSip</a></h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="/" title="Home">Home</a>
+        </li>
+        <li>
+          <a href="/about/" title="About">About</a>
+        </li>
+        <li>
+          <a href="https://github.com/andreip024/checkawsip" target="_blank" title="GitHub Project">GitHub Project</a>
+        </li>
+        <li>
+          <a class="btn" href="/singin/" title="Register / Log In">Register/Log In</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
+</html>
